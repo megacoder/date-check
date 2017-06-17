@@ -1,0 +1,7 @@
+#!/bin/zsh
+for TZ in GMT CST6CDT PST8PDT
+do
+	echo -e "Timezone: ${TZ}"
+	echo -ne "\t"; TZ=${TZ} date --date="20061029"
+	echo -ne "\t"; TZ=${TZ} date --date="20061029 1 day"
+done
